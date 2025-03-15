@@ -28,7 +28,7 @@ pipeline
                     withSonarQubeEnv('sonarqube') 
                     {
                        sh """
-                         export PATH=$PATH:/opt/sonar-scanner/sonar-scanner/bin
+                         export PATH=$PATH:/opt/sonarscanner/bin
                          ${SONAR_SCANNER_HOME}\
                          -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
                          -Dsonar.sources=. \
