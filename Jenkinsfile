@@ -28,7 +28,8 @@ pipeline
                     withSonarQubeEnv('sonarqube') 
                     {
                        sh """
-                         ${SONAR_SCANNER_HOME}/usr/local/bin/sonar-scanner \
+                         export PATH=$PATH:/opt/sonar-scanner/sonar-scanner/bin
+                         ${SONAR_SCANNER_HOME}\
                          -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
                          -Dsonar.sources=. \
                          -Dsonar.host.url=http://192.168.1.82:9000 \
