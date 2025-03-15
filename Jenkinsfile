@@ -33,7 +33,7 @@ pipeline
                          -Dsonar.projectKey=web-app-jenkins \
                          -Dsonar.sources=. \
                          -Dsonar.host.url=http://192.168.1.82:9000 \
-                         -Dsonar.login=${sonar_token}
+                         -Dsonar.login=sqa_510ef5ae70a0684d5dff626556d6929eeb6cea90
                        """
                     }
                 }
