@@ -5,7 +5,6 @@ pipeline
     // Environment Variables
     environment
     {
-        SONAR_PROJECT_KEY   = 'web-app-jenkins'
         SONAR_SCANNER_HOME  =  tool 'sonarqubescanner'
     }
     stages
@@ -31,7 +30,7 @@ pipeline
                          chmod +x /opt/sonarscanner/bin/sonar-scanner
                          /opt/sonarscanner/bin/sonar-scanner
                          ${SONAR_SCANNER_HOME}\
-                         -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
+                         -Dsonar.projectKey=web-app-jenkins \
                          -Dsonar.sources=. \
                          -Dsonar.host.url=http://192.168.1.82:9000 \
                          -Dsonar.login=${sonar_token}
